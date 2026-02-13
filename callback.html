@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Callback Melhor Envio</title>
+</head>
+<body>
+  <h1>Callback recebido</h1>
+
+  <pre id="output"></pre>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+
+    document.getElementById("output").textContent =
+      code ? `Code recebido:\n${code}` : "Nenhum code recebido";
+  </script>
+</body>
+</html>
